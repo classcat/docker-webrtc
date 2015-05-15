@@ -15,6 +15,7 @@ RUN apt-get update && apt-get -y install g++ make unzip \
   && tar xfz node-v0.10.37.tar.gz \
   && cd node-v0.10.37 \
   && ./configure && make && make install \
+  && cd .. \
   && wget http://easyrtc.com/files/easyrtc_server_example.zip \
   && unzip easyrtc_server_example.zip -d easyrtc_server_example
 
