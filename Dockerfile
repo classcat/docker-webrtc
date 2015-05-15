@@ -10,11 +10,13 @@ MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 #-----------------------------------------------------------------------
 
 WORKDIR /usr/local
-RUN apt-get update && apt-get -y install g++ make \
+RUN apt-get update && apt-get -y install g++ make unzip \
   && wget http://nodejs.org/dist/v0.10.37/node-v0.10.37.tar.gz \
   && tar xfz node-v0.10.37.tar.gz \
   && cd node-v0.10.37 \
-  && ./configure && make && make install
+  && ./configure && make && make install \
+  && wget http://easyrtc.com/files/easyrtc_server_example.zip \
+  && unzip easyrtc_server_example.zip -d easyrtc_server_example
 
 WORKDIR /opt
 ADD assets/cc-init.sh /opt/cc-init.sh
