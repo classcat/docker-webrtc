@@ -9,8 +9,12 @@ MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 #--- HISTORY -----------------------------------------------------------
 #-----------------------------------------------------------------------
 
-
-RUN apt-get update && apt-get -y install g++ make
+WORKDIR /usr/local
+RUN apt-get update && apt-get -y install g++ make \
+  && wget http://nodejs.org/dist/v0.10.37/node-v0.10.37.tar.gz \
+  && tar xfz node-v0.10.37.tar.gz \
+  && cd node-v0.10.37 \
+  && ./configure && make && make install
 
 WORKDIR /opt
 ADD assets/cc-init.sh /opt/cc-init.sh
