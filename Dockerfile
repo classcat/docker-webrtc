@@ -17,7 +17,9 @@ RUN apt-get update && apt-get -y install g++ make unzip \
   && ./configure && make && make install \
   && cd .. \
   && wget http://easyrtc.com/files/easyrtc_server_example.zip \
-  && unzip easyrtc_server_example.zip -d easyrtc_server_example
+  && unzip easyrtc_server_example.zip -d easyrtc_server_example \
+  && cd easyrtc_server_example \
+  && npm install
 
 WORKDIR /opt
 ADD assets/cc-init.sh /opt/cc-init.sh
