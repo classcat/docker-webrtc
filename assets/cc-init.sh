@@ -6,6 +6,7 @@
 ########################################################################
 
 #--- HISTORY -----------------------------------------------------------
+# 16-may-15: node server
 #-----------------------------------------------------------------------
 
 
@@ -52,6 +53,10 @@ function put_public_key() {
 
 function proc_supervisor () {
   cat > /etc/supervisor/conf.d/supervisord.conf <<EOF
+
+[program:node]
+command=node /usr/local/easyrtc_server_example/server
+
 [program:ssh]
 command=/usr/sbin/sshd -D
 
