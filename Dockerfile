@@ -22,6 +22,6 @@ RUN apt-get update && apt-get -y install g++ make unzip \
 WORKDIR /opt
 ADD assets/cc-init.sh /opt/cc-init.sh
 
-EXPOSE 22
+EXPOSE 22 8080
 
 CMD /opt/cc-init.sh; /usr/bin/supervisord -c /etc/supervisor/supervisord.conf
