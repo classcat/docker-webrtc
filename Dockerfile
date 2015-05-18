@@ -1,4 +1,4 @@
-FROM classcat/ubuntu-supervisord2:vivid
+FROM classcat/ubuntu-supervisord2:trusty
 MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 
 ########################################################################
@@ -7,7 +7,7 @@ MAINTAINER ClassCat Co.,Ltd. <support@classcat.com>
 ########################################################################
 
 #--- HISTORY -----------------------------------------------------------
-# 18-may-15 : fixed.
+# 18-may-15 : trusty: fixed.
 #-----------------------------------------------------------------------
 
 WORKDIR /usr/local
