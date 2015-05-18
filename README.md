@@ -3,7 +3,7 @@
 ## Summary
 
 Dockerized WebRTC (EasyRTC) Demo Applications.  
-Ubuntu Vivid/Trusty images with the followings services :
+Ubuntu Vivid/Trusty images with the following services :
 
 + EasyRTC
 + supervisord
