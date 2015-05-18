@@ -1,9 +1,12 @@
-# Web RTC
+# WebRTC
 
-webrtc demo
+Dockerized WebRTC (EasyRTC) Demo.
 
 ## Summary
 
+Ubuntu Vivid/Trusty WebRTC demo images with :
+
++ EasyRTC
 + supervisord
 + sshd
 
@@ -17,6 +20,7 @@ built on the top of the formal Ubuntu images.
 
 + latest - vivid
 + vivid
++ trusty
 
 ## Pull Image
 
@@ -33,4 +37,3 @@ $ sudo docker run -d --name (container name) \
 -e SSH_PUBLIC_KEY="ssh-rsa xxx" \  
 classcat/webrtc
 ```
-
