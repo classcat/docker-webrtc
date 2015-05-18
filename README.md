@@ -1,10 +1,9 @@
 # WebRTC
 
-Dockerized WebRTC (EasyRTC) Demo.
-
 ## Summary
 
-Ubuntu Vivid/Trusty WebRTC demo images with :
+Dockerized WebRTC (EasyRTC) Demo Applications.  
+Ubuntu Vivid/Trusty images with the followings services :
 
 + EasyRTC
 + supervisord
@@ -35,5 +34,14 @@ $ sudo docker run -d --name (container name) \
 -p 2022:22 -p 8080:8080 \  
 -e ROOT_PASSWORD=(root password) \  
 -e SSH_PUBLIC_KEY="ssh-rsa xxx" \  
+classcat/webrtc
+```
+
+## Example usage
+
+```
+$ sudo docker run -d --name mywebrtc \  
+-p 2022:22 -p 8080:8080 \  
+-e ROOT_PASSWORD=mypassword \  
 classcat/webrtc
 ```
